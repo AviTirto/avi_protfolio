@@ -34,21 +34,21 @@ loadIcons([
 function Hero() {
   return (
     <section class="p-4 flex justify-evenly items-center flex-wrap">
-      <div class="max-w-sm mt-8">
+      <div class="mt-8 max-w-3xl">
         <h1 class="text-4xl font-bold text-primary">
           <TypingAnimation
             strings={[
-              '"Hello, World!"',
-              "I'm a developer.",
+              '"Hi, I am Avi!"',
+              '"I can code!"'
             ]}
             autoStart={true}
           />
         </h1>
-        <p class="text-xl mt-4">
-          I build web applications and websites using modern technologies.
+        <p class="text-s mt-4">
+        Computer Science and Data Science Major at the University of Wisconsin - Madison with experience in designing and optimizing machine learning models, developing scalable web applications, and enhancing data pipelines to minimize latency and ensure efficient data flow.
         </p>
       </div>
-      <SpinningModel />
+      {/* <SpinningModel /> */}
     </section>
   );
 }
@@ -62,19 +62,25 @@ interface Value {
 function Values() {
   const values: Value[] = [
     {
-      title: "Passion for Continuous Learning",
+      title: "Statistics and Machine Learning",
       description:
         "I actively seek out new technologies and stay up-to-date with industry trends.",
       image: "/img/pexels-pixabay-159711.webp",
     },
     {
-      title: "User-Centric Approach",
+      title: "Languages and Frameworks",
       description:
         "My goal is to create user-friendly applications that solve real-world problems.",
       image: "/img/pexels-picjumbo-com-55570-196644.webp",
     },
     {
-      title: "Collaboration and Communication",
+      title: "Databases",
+      description:
+        "I excel in team environments and communicate effectively with stakeholders.",
+      image: "/img/pexels-fauxels-3184418.webp",
+    },
+    {
+      title: "Others",
       description:
         "I excel in team environments and communicate effectively with stakeholders.",
       image: "/img/pexels-fauxels-3184418.webp",
@@ -83,6 +89,9 @@ function Values() {
 
   return (
     <>
+      <div class='w-full text-center p-5 pt-20'>
+        <h1 class='text-4xl font-semibold'>Skills</h1>
+      </div>
       <Wave flip={false} />
       <section class="p-4 flex justify-center items-center gap-4 flex-wrap bg-primary">
         {values.map((value, i) => (
@@ -119,15 +128,27 @@ interface Experience {
 function Experience() {
   const experiences: Experience[] = [
     {
-      title: "Full Stack Web Developer",
-      company: "AST Advanced Sales Technologies GmbH",
-      timePeriod: "Sep 2023 - Apr 2024",
+      title: "Data Science Intern",
+      company: "Mandiri Sekuritas",
+      timePeriod: "Jun 2024 - Aug 2024",
       location: "Vienna, Austria",
     },
     {
-      title: "Junior Web Developer",
-      company: "AST Advanced Sales Technologies GmbH",
-      timePeriod: "Feb 2023 - Sep 2023",
+      title: "Data Analyst",
+      company: "Wisconsin School of Business",
+      timePeriod: "Jul 2023 - Dec 2023",
+      location: "Vienna, Austria",
+    },
+    {
+      title: "Research Assistant",
+      company: "Wisconsin Institute of Discovery",
+      timePeriod: "May 2023 - Jan 2024",
+      location: "Vienna, Austria",
+    },
+    {
+      title: "IT Intern",
+      company: "PT Alto",
+      timePeriod: "Jun 2022 - Aug 2022",
       location: "Vienna, Austria",
     },
   ];
@@ -194,18 +215,42 @@ interface Project {
 function Projects() {
   const projects: Project[] = [
     {
-      title: "Denoland Fresh",
+      title: "Guru AI",
       description:
-        "Fresh is a full stack modern web framework for JavaScript and TypeScript developers.",
-      link: "https://fresh.deno.dev/",
+        "An AI-powered course-building platform that generates personalized study tools. The platform includes a lecture search tool for answering open-ended questions, AI-generated flashcards to reinforce learning, and AI-generated summaries from notes and course documents to streamline study sessions.",
+      link: "https://github.com/AviTirto/ClassroomPlatform",
       type: "Open Source",
       icon: "logos:deno",
     },
     {
-      title: "Dogr.",
+      title: "Kaggle Notebooks",
       description:
-        "Dogr is a web application I developed to hone my skills in Nuxt and Vue.",
-      link: "https://dogr.vercel.app/",
+        "A collection of Machine Learning models I developed on Kaggle.",
+      link: "https://github.com/AviTirto/TensorFlowProjects",
+      type: "Personal",
+      icon: "logos:vue",
+    },
+    {
+      title: "Midwestern University Data Analytics Competition 2024",
+      description:
+        "A comprehensive data analysis on the impact of fertilizer usage on crop production in Minnesota. The project involved evaluating various data sets to identify trends, correlations, and actionable insights, ultimately contributing to a better understanding of how different fertilizers affect agricultural output.",
+      link: "https://github.com/AviTirto/MUDAC2024",
+      type: "Personal",
+      icon: "logos:vue",
+    },
+    {
+      title: "Data Analysis ChatBot",
+      description:
+        "A chatbot designed to generate SQL code and visualize data, streamlining the process of querying databases and creating data-driven insights.",
+      link: "https://github.com/AviTirto/SQLWriter",
+      type: "Personal",
+      icon: "logos:vue",
+    },
+    {
+      title: "Password Generator",
+      description:
+        "A React-based website for generating secure, customizable passwords.",
+      link: "https://github.com/AviTirto/PasswordGenerator",
       type: "Personal",
       icon: "logos:vue",
     },
@@ -251,22 +296,13 @@ function Technologies() {
     "vscode-icons:file-type-js-official",
     "logos:html-5",
     "logos:css-3",
-    "logos:php",
     "logos:typescript-icon",
     "skill-icons:react-dark",
-    "logos:vue",
-    "devicon:nextjs",
-    "skill-icons:nuxtjs-dark",
-    "logos:nestjs",
-    "logos:fresh",
-    "skill-icons:laravel-dark",
     "skill-icons:tailwindcss-dark",
     "logos:deno",
     "devicon:nodejs",
     "vscode-icons:file-type-mongo",
     "logos:postgresql",
-    "logos:mariadb-icon",
-    "skill-icons:cassandra-light",
     "skill-icons:docker",
   ];
 
@@ -293,9 +329,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Values />
-      <Projects />
       <Experience />
+      <Projects />
+      <Values />
       <Technologies />
     </>
   );

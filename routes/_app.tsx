@@ -9,11 +9,11 @@ function MetaTags(
     <>
       {/* Primary Meta Tags */}
       <title>
-        ${credentials.name} - Experienced Web Developer | Full Portfolio
+        ${credentials.name} - Avicenna Hartojo Tirtosuharto | Portfolio
       </title>
       <meta
         name="title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Avicenna Hartojo Tirtosuharto | Portfolio`}
       />
       <meta
         name="description"
@@ -25,7 +25,7 @@ function MetaTags(
       <meta property="og:url" content={`${url}`} />
       <meta
         property="og:title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Avicenna Hartojo Tirtosuharto | Portfolio`}
       />
       <meta
         property="og:description"
@@ -41,7 +41,7 @@ function MetaTags(
       <meta property="twitter:url" content={`${url}`} />
       <meta
         property="twitter:title"
-        content={`${credentials.name} - Experienced Web Developer | Full Portfolio`}
+        content={`${credentials.name} - Avicenna Hartojo Tirtosuharto | Portfolio`}
       />
       <meta
         property="twitter:description"
@@ -61,23 +61,18 @@ export default function App({ Component }: PageProps) {
   const socials = [
     {
       name: "GitHub",
-      url: "https://github.com/michael-pfister/deno-portfolio",
+      url: "https://github.com/avitirto",
       icon: "fa-brands:github",
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com/ScaredToCompile",
-      icon: "fa-brands:twitter",
-    },
-    {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/michael-pascal-pfister",
+      url: "https://www.linkedin.com/in/avi-tirto/",
       icon: "fa-brands:linkedin",
     },
   ];
 
   const credentials = {
-    name: "John Doe",
+    name: "Avicenna Hartojo Tirtosuharto",
   };
 
   const url = "https://opensource-portfolio.deno.dev/";
@@ -100,17 +95,6 @@ export default function App({ Component }: PageProps) {
         </main>
         <footer class="mt-auto footer w-auto m-2 p-4 bg-neutral text-neutral-content rounded-lg">
           <aside>
-            <span>MIT licensed with ❤️ by Michael</span>
-            <span>
-              3D Art by{" "}
-              <a
-                class="underline"
-                href="https://sketchfab.com/KJLOYH"
-                target="_blank"
-              >
-                Valery Kharitonov
-              </a>
-            </span>
           </aside>
           <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             {socials.map((social) => (
